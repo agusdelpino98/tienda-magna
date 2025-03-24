@@ -1,7 +1,5 @@
 
-/* 
-  VARIABLES Y PALETA DE COLORES
--------------------------------- */
+
 :root {
   --color-primario: #333;
   --color-secundario: #444;
@@ -12,14 +10,12 @@
   --color-gris: #ddd;
   --color-texto: #222;
 
-  /* Tipografías y sombras */
+
   --fuente-principal: 'Arial', sans-serif;
   --sombra-baja: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* 
-  RESETEO BÁSICO
--------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -33,9 +29,7 @@ body {
   line-height: 1.6;
 }
 
-/* 
-  ENCABEZADO
--------------------------------- */
+
 header {
   background-color: var(--color-primario);
   color: var(--color-blanco);
@@ -44,9 +38,7 @@ header {
   box-shadow: var(--sombra-baja);
 }
 
-/* 
-  NAVEGACIÓN
--------------------------------- */
+
 nav {
   background-color: var(--color-secundario);
   padding: 1rem;
@@ -65,28 +57,21 @@ nav a:hover {
   color: var(--color-acento);
 }
 
-/* 
-  SECCIONES GENERALES
--------------------------------- */
+
 section {
   margin: 2rem auto;
   padding: 1rem;
   max-width: 1200px;
 }
 
-/* 
-  CONTENEDOR (opc.) 
-  - O puedes usar class=\"container\" de Bootstrap
--------------------------------- */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* 
-  FORMULARIOS 
--------------------------------- */
+
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -136,9 +121,7 @@ button:hover {
   background-color: var(--color-secundario);
 }
 
-/* 
-  PRODUCTOS (USO DE GRID)
--------------------------------- */
+
 .productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -170,9 +153,7 @@ button:hover {
   font-weight: bold;
 }
 
-/* 
-  FOOTER
--------------------------------- */
+
 footer {
   background-color: var(--color-primario);
   color: var(--color-blanco);
@@ -181,9 +162,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* 
-  TRANSICIONES Y ANIMACIONES ADICIONALES
--------------------------------- */
+
 a {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
@@ -192,10 +171,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 
-  MEDIA QUERIES 
-  (EJEMPLO: + PEQUEÑO y + GRANDE)
--------------------------------- */
+
 @media (max-width: 992px) {
   nav a {
     display: inline-block;

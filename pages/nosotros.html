@@ -3,13 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Fashion Store</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Nosotros - Fashion Store</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #555;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem;
+            margin: 0 1rem;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #777;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #333;
+        }
+        .timeline-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #e0e0e0;
+            border-radius: 5px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            width: 20px;
+            height: 20px;
+            background: #333;
+            border-radius: 50%;
+        }
+        .tarjeta-flip {
+            perspective: 1000px;
+            display: inline-block;
+        }
+        .tarjeta-inner {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .tarjeta-flip:hover .tarjeta-inner {
+            transform: rotateY(180deg);
+        }
+        .tarjeta-frontal, .tarjeta-trasera {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .tarjeta-trasera {
+            transform: rotateY(180deg);
+            background: #ff8800;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>MAGNA</h1>
+    <header>
+        <h1>Fashion Store</h1>
     </header>
     
     <nav>
@@ -20,29 +125,39 @@
         <a href="contacto.html">Contacto</a>
     </nav>
     
-    <section class="container my-5">
-        <h2 class="text-center">Contáctanos</h2>
-        <form class="container p-4 bg-light rounded shadow">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" required>
+    <div class="container">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una tienda comprometida con la moda accesible desde 2010.</p>
+        
+        <h3>Nuestra Misión</h3>
+        <p>Ofrecer estilo y calidad a precios justos.</p>
+        
+        <div class="tarjeta-flip">
+            <div class="tarjeta-inner">
+                <div class="tarjeta-frontal">💡 ¿Sabías que...?</div>
+                <div class="tarjeta-trasera">¡Reciclamos el 90% de nuestros materiales!</div>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo:</label>
-                <input type="email" class="form-control" id="email" required>
+        </div>
+        
+        <h3>Nuestra Historia</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>2005 - Nace la Idea</h4>
+                <p>Un pequeño taller en el garaje de casa.</p>
             </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje:</label>
-                <textarea id="mensaje" class="form-control" rows="4" required></textarea>
+            <div class="timeline-item">
+                <h4>2020 - Primera Colección</h4>
+                <p>Lanzamos diseños inspirados en el arte callejero.</p>
             </div>
-            <button type="submit" class="btn btn-dark">Enviar</button>
-        </form>
-    </section>
-
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2025 MAGNA</p>
+            <div class="timeline-item">
+              <h4>2024 - Primera tienda online</h4>
+              <p>Lanzamos nuestra primera tienda online para todo el pais.</p>
+          </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Fashion Store</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

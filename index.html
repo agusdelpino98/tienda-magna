@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAGNA - Inicio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* animacion gradual del banner */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .banner-animate {
+            animation: fadeIn 5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-dark text-white text-center py-3">
@@ -40,7 +49,7 @@
 
     <section class="container my-5 text-center">
         <h2 class="text-center">Bienvenidos</h2>
-        <img src="assets/imagenes/banner.jpg" alt="Banner" class="img-fluid mt-3 d-block mx-auto">
+        <img src="assets/imagenes/banner.jpg" alt="Banner" class="img-fluid mt-3 d-block mx-auto banner-animate">
     </section>
 
     <section class="container my-5">
